@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{           /*    使用通用选择器进行整体共有样式设置 */          
+			    margin: 0px;                         
+			    padding: 0px;
+			    font-size: 48px;
+			    text-align: center;
+			    box-sizing: border-box;
+			}
+			#header,
+			#main,        /*给头部/主体/底部同时设置宽/高/背景色, 水平垂直居中 */  
+			#foot{
+			    height: 100px; 
+			    width: 1200px;
+			    background-color: pink;
+			    line-height: 100px;
+			    margin: 0 auto;
+			    min-width: 300px;
+			}
+			#header ul{
+			    width: 80%;           
+			}
+			#header ul li{
+			    float: left;
+			    width: 20%;
+			    list-style: none;
+			    font-size: 20px;
+			}
+			#header div{  
+			  /* li 全部浮动,父盒子ul塌陷,相当于不存在了，div才能浮动到ul右侧*/
+			    display: none;              
+			    width: 50px;
+			    height: 50px;
+			    background-color: yellow;
+			    float: right;
+			    line-height: 50px;
+			    font-size: 20px;
+			    margin-top: 25px;
+			    margin-right: 25px;
+			}
+			#main{
+			    height: 520px;      /* 给主体设置高度/文字垂直居中/上下边框*/
+			    line-height: 520px;
+			    border-bottom: 10px solid white;
+			    border-top: 10px solid white;
+			    
+			}
+			/* 将主体分成三部分,左:中:右=1:2:1 分别设置不同背景色 浮动*/
+			#main .left{       
+			    width: 25%;
+			    height: 500px;
+			    background-color: greenyellow;
+			    float: left;
+			}
+			#main .center{
+			    width: 50%;
+			    height: 500px;
+			    background-color: orange;
+			    border-right: 10px solid white;
+			    border-left: 10px solid white;
+			    float: left;
+			}
+			#main .right{
+			    width: 25%;
+			    height: 500px;
+			    background-color: paleturquoise;
+			    float: left;
+			}
+		</style>
+	</head>
+	<body>
+		 <header id="header">
+		        <ul>
+		            <li>header1</li>
+		            <li>header2</li>
+		            <li>header3</li>
+		            <li>header4</li>
+		            <li>header5</li>
+		            </ul>
+		        <div>
+		            icon    
+		        </div>
+		    </header>
+		        
+		    <section id="main">
+		        <div class="left">
+		            left
+		        </div>
+		        <div class="center">
+		            center
+		        </div>
+		        <div class="right">
+		            right
+		        </div>
+		    </section>
+		        
+		    <footer id="foot">
+		        footer
+		    </footer>
+	</body>
+</html>
